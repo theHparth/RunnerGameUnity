@@ -39,12 +39,12 @@ namespace StylizedWater2
             {
                 GetLatestCompatibleURPVersion();
 
-                if (EditorUtility.DisplayDialog(ASSET_NAME + " v" + INSTALLED_VERSION, "This package requires the Universal Render Pipeline " + MIN_URP_VERSION + " or newer, would you like to install or update it now?", "OK", "Later"))
+               /* if (EditorUtility.DisplayDialog(ASSET_NAME + " v" + INSTALLED_VERSION, "This package requires the Universal Render Pipeline " + MIN_URP_VERSION + " or newer, would you like to install or update it now?", "OK", "Later"))
                 {
 					Debug.Log("Universal Render Pipeline <b>v" + lastestURPVersion + "</b> will start installing in a moment. Please refer to the URP documentation for set up instructions");
 					
                     InstallURP();
-                }
+                }*/
             }
 
             public const string URP_PACKAGE_ID = "com.unity.render-pipelines.universal";
@@ -72,10 +72,10 @@ namespace StylizedWater2
 #endif
             private static void GetLatestCompatibleURPVersion()
             {
-                if(urpPackage == null) urpPackage = GetURPPackage();
+               /* if(urpPackage == null) urpPackage = GetURPPackage();
                 if(urpPackage == null) return;
                 
-                lastestURPVersion = urpPackage.versions.latestCompatible;
+                lastestURPVersion = urpPackage.versions.latestCompatible;*/
                 
 #if SWS_DEV
                 Debug.Log("Latest compatible URP version: " + lastestURPVersion);

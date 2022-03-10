@@ -45,7 +45,7 @@ namespace StylizedWater2
         public void Init()
         {
             AssetInfo.VersionChecking.CheckForUpdate(false);
-            AssetInfo.VersionChecking.CheckUnityVersion();
+           // AssetInfo.VersionChecking.CheckUnityVersion();
             StylizedWaterEditor.DWP2.CheckInstallation();
             
             ShaderConfigurator.RefreshShaderFilePaths();
@@ -78,7 +78,7 @@ namespace StylizedWater2
 
         void DrawHeader()
         {
-            EditorGUILayout.Space();
+            //EditorGUILayout.Space();
             EditorGUILayout.LabelField("<size=24>" + AssetInfo.ASSET_NAME + "</size>", UI.Styles.Header);
 
             GUILayout.Label("Version: " + AssetInfo.INSTALLED_VERSION, UI.Styles.Footer);
