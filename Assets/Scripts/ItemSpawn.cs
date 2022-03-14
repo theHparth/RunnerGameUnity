@@ -9,7 +9,9 @@ public class ItemSpawn : MonoBehaviour
     public Transform[] places;
     public GameObject[] GoodItems;
     public GameObject[] BadItems;
+    public Transform player;
 
+    public float startTime=3,interval=2;
 
     private void Start()
     {
@@ -24,12 +26,12 @@ public class ItemSpawn : MonoBehaviour
             int value = Random.Range(0, 9);
             if (value > 4)
             {
-                Instantiate(GoodItems[Random.Range(0, GoodItems.Length - 1)], x.position,Quaternion.identity);
+                Instantiate(GoodItems[Random.Range(0, GoodItems.Length - 1)],new Vector3(0,0,player.position.z)+ x.position,Quaternion.identity);
 
             }
             else
             {
-                Instantiate(BadItems[Random.Range(0, BadItems.Length - 1)], x.position, Quaternion.identity);
+                Instantiate(BadItems[Random.Range(0, BadItems.Length - 1)], new Vector3(0, 0, player.position.z) + x.position, Quaternion.identity);
             }
         }
     }

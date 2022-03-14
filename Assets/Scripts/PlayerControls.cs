@@ -18,7 +18,8 @@ public class PlayerControls : MonoBehaviour
     public bool b_walk;
     public Animator[] anim;
     public bool isMale, isFemale;
-    
+    [SerializeField]
+    int Age = 99;
 
     public playerCloth[] FemaleClothes, MaleCloths;
     // Start is called before the first frame update
@@ -85,7 +86,24 @@ public class PlayerControls : MonoBehaviour
     }
 
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Collectible"))
+        {
+            if (other.GetComponent<Item>().isGood)
+            {
+                Age--;
+            }
+            else
+            {
+                Age++;
+            }
+
+            Destroy(other.gameObject);
+        }
+    }
+
+
 }
 [System.Serializable]
 

@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1087683617470696363}
   - component: {fileID: 953376806893441519}
-  - component: {fileID: 7876582615944958889}
-  - component: {fileID: 5416381285152451857}
   m_Layer: 0
   m_Name: Energydrink
   m_TagString: change
@@ -48,60 +46,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.27947298, y: 1.95, z: 0.2874713}
   m_Center: {x: -0.00006572902, y: 0, z: 0.005145669}
---- !u!114 &7876582615944958889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311850978928890129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa666bbe651ee8448513dba682af4ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data:
-    type: 0
-    head: 0
-    torso: 0
-    legs: 0
-    shoes: 0
-    socks: 0
-    item: 9
-    affectsSpeed: 1
-    speed: 0.1
-    hasTimeOut: 0
-    timeOut: 3
-    EnemySpeedReduce: 0
-    hideCollectibleIn: 5
-    PlayerSpeedReduce: 0
---- !u!114 &5416381285152451857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311850978928890129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e302065c4918f214099198e6b522dde4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LimitXMin: -0.1
-  LimitXax: 0.1
-  LimitYin: 0
-  LimitYmax: 0
-  Vertical: 0
-  speed: 1
-  Target: {fileID: 1087683617470696363}
-  type: 0
-  rotX: 0
-  rotY: 1
-  rotZ: 0
-  MaxX: 0
-  MaxY: 90
-  MaxZ: 0
-  rotSpeed: 2
 --- !u!1 &5772843660843797894
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,63 +134,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1087683617470696363}
     m_Modifications:
-    - target: {fileID: 5602470827836123123, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836123123, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_Name
       value: ParEnergyDrink
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-        type: 3}
+    - target: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -254,7 +186,6 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
 --- !u!4 &6343265413389858052 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 5602470827836406533, guid: 205b8d62564a6bd4d9710869d4ef8bf2, type: 3}
   m_PrefabInstance: {fileID: 1565062176684822017}
   m_PrefabAsset: {fileID: 0}
