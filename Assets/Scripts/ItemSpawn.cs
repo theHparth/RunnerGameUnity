@@ -15,7 +15,7 @@ public class ItemSpawn : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(Spawn), 5, 5);
+        InvokeRepeating(nameof(Spawn), startTime, interval);
     }
 
 

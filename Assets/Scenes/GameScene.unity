@@ -344,7 +344,7 @@ MonoBehaviour:
   BadItems:
   - {fileID: 8157886054851633742, guid: cf5bfe43e5d294e029688186b40bff4b, type: 3}
   player: {fileID: 1703993514}
-  startTime: 2
+  startTime: 0
   interval: 1
 --- !u!1001 &721768511
 PrefabInstance:
@@ -1031,7 +1031,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

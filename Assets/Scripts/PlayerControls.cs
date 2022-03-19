@@ -22,6 +22,8 @@ public class PlayerControls : MonoBehaviour
     int Age = 99;
 
     public playerCloth[] FemaleClothes, MaleCloths;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -109,5 +111,6 @@ public class PlayerControls : MonoBehaviour
 
 public class playerCloth
 {
+    public clothType type;
     public GameObject Torso, Legs, Head, Shoes;
 }
