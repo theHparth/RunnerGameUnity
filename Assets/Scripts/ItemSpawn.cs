@@ -31,7 +31,7 @@ public class ItemSpawn : MonoBehaviour
             }
             else
             {
-                Instantiate(BadItems[Random.Range(0, BadItems.Length - 1)], new Vector3(0, 0, player.position.z) + x.position, Quaternion.identity);
+                Instantiate(BadItems[Random.Range(0, BadItems.Length )], new Vector3(0, 0, player.position.z) + x.position, Quaternion.identity);
             }
         }
     }

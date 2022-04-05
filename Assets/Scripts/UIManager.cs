@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject Home,GamePlay;
+    public GameObject Home,GamePlay,GameOver;
     public TMPro.TextMeshProUGUI scoreTxt;
     public static UIManager instance;
     private void Awake()
@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
    public void StartGame()
     {
         Home.SetActive(false);
-        GamePlay.SetActive(false);
+        GamePlay.SetActive(true);
         GameManager.instance.startGame();
     }
 
@@ -32,5 +32,15 @@ public class UIManager : MonoBehaviour
     public void SendScore(int value)
     {
         scoreTxt.text ="AGE: "+ value.ToString();
+    }
+
+    public void RestartGame()
+    {
+        GameManager.instance.RestartGame();
+    }
+
+    public void ShowGameOver()
+    {
+        GameOver.SetActive(true);
     }
 }

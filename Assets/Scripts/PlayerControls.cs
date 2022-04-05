@@ -28,6 +28,8 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         positionIndex = 1; //middle
+        UIManager.instance.SendScore(Age);
+
     }
     void walk()
     {
@@ -123,20 +125,28 @@ public class PlayerControls : MonoBehaviour
             x.SetFloat(value, blendvalue);
         }
     }
-
+    public float distance;
 
     void checkSwipe()
     {
-       
-        if(initial.x > final.x)
+        if (Vector3.Distance(initial, final) > distance)
         {
-            Debug.Log("left");
-            GoLeft();
+
+
+            if (initial.x > final.x)
+            {
+                Debug.Log("left");
+                GoLeft();
+            }
+            else
+            {
+                Debug.Log("right");
+                GoRight();
+            }
         }
         else
         {
-            Debug.Log("right");
-            GoRight();
+            Debug.Log("Ignore Swipe");
         }
     }
 
@@ -164,7 +174,19 @@ public class PlayerControls : MonoBehaviour
             var item = other.GetComponent<Item>();
             if (item.isGood)
             {
-                Age-=item.thisItemHealth;
+                if(Age> 20)
+                {
+                    Age -= item.thisItemHealth;
+                    if(Age <= 20)
+                    {
+                        Age = 20;
+                    }
+                }
+                else
+                {
+                    Age = 20;
+                }
+                
             }
             else
             {
@@ -173,8 +195,22 @@ public class PlayerControls : MonoBehaviour
             UIManager.instance.SendScore(Age);
             Destroy(other.gameObject);
         }
+
+        if (other.CompareTag("Enemy"))
+        {
+            SetAnim(true, "Collision");
+            b_walk = false;
+            walk_speed = 0;
+            Destroy(other.gameObject);
+            Invoke(nameof(setGameOver), 2);
+        }
     }
 
+
+    void setGameOver()
+    {
+        UIManager.instance.ShowGameOver();
+    }
 
 }
 [System.Serializable]
