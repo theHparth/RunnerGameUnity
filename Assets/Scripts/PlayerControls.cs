@@ -186,11 +186,12 @@ public class PlayerControls : MonoBehaviour
                 {
                     Age = 20;
                 }
-                
+                GameManager.instance.UpdateScore(item.thisItemHealth);
             }
             else
             {
                 Age += item.thisItemHealth;
+               // GameManager.instance.UpdateScore(-item.thisItemHealth);
             }
             UIManager.instance.SendScore(Age);
             Destroy(other.gameObject);
