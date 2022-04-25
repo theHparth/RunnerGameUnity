@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6285696767658125967}
   - component: {fileID: 290427765019022966}
   m_Layer: 0
-  m_Name: Onigiri
+  m_Name: ricecake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

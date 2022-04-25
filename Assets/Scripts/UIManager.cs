@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject Home,GamePlay,GameOver;
+    public GameObject Home,GamePlay,GameOver,GamePause;
     public TMPro.TextMeshProUGUI scoreTxt;
     public static UIManager instance;
     public TMPro.TextMeshProUGUI[] BestScoreTxt,Points_txt;
+    
     private void Awake()
     {
         instance = this;
@@ -42,6 +43,13 @@ public class UIManager : MonoBehaviour
         Debug.Log("GameFinish");
         GameManager.instance.TrySetHighScore();
         fetchBestScore();
+    }
+
+    public void OnGamePause(bool val)
+    {
+        if (val == true) Time.timeScale = 0; else Time.timeScale = 1;
+        GamePause.SetActive(val);
+        
     }
 
     public void SendScore(int value)
