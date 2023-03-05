@@ -9,7 +9,7 @@ public class EnableEvent : MonoBehaviour
     [System.Serializable]
     public struct OnEnableHandler
     {
-        public float Delete1234;
+        public float Delete12345;
         public float StartDelay;
         public UnityEvent Enable;
     }
