@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+ 
 public class EnableEvent : MonoBehaviour
 {
     public UnityEvent _Enable;
     [System.Serializable]
     public struct OnEnableHandler
     {
+        public float Delete123;
         public float StartDelay;
         public UnityEvent Enable;
     }
