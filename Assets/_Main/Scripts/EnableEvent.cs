@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+// https://github.com/theHparth/RunnerGameUnity/issues/2
 using UnityEngine;
 using UnityEngine.Events;
-
+ 
 public class EnableEvent : MonoBehaviour
 {
+    // TODO: help
     public UnityEvent _Enable;
     [System.Serializable]
     public struct OnEnableHandler
     {
+        public float Delete12345;       
         public float StartDelay;
         public UnityEvent Enable;
     }
-
+// https://github.com/theHparth/RunnerGameUnity/issues/3 - 1234 5
     [Header ("OnEnable")]
     public OnEnableHandler[] EnableHandler;
 
